@@ -1,0 +1,170 @@
+{
+    "layer": "top",
+    "width": 1600,
+    "modules-left": ["group/left"],
+    "modules-center": ["cava","group/center","cava"],
+    "modules-right": ["group/right"],
+    
+	"group/left": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"memory",
+			"temperature",
+			"update"
+		]
+	},
+	"group/center": {
+		"orientation": "horizontal",
+		
+		"modules": [
+			"hyprland/workspaces#left",
+			"clock",
+			"hyprland/workspaces#right"
+		]
+	},
+	"group/right": {
+		"orientation": "horizontal",
+		"modules": [
+			"network",
+			"bluetooth",
+			"pulseaudio#output",
+			"pulseaudio#input",
+			"power-profiles-daemon",
+			"battery"
+		]
+	},
+	
+	"sway/window": {
+        "max-length": 50
+    },
+    "battery": {
+	"bat": "BAT0",
+	"interval": 60,
+	"format": "{capacity}% {icon}",
+	"format-icons": {
+		"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+	    }
+    },
+    "clock": {
+		"interval": 60,
+        "format-alt": "{:%a, %d. %b  %H:%M}",
+		"tooltip-format": "{:%Y-%m-%d}",
+		"tooltip": true
+    },
+    "network": {
+	"interface": "wlp0s20f3",
+	"format-wifi": " 󰖩",
+	"format-ethernet": " ",
+	"format-disconnected": "󱛅",
+	"tooltip-format-wifi": " 󰖩 {essid}",
+	"tooltip-format-ethernet": "  {essid}",
+	"tooltip-format-disconnected": "󱛅 {essid}",
+	"max-length": 50
+    },
+    "power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip-format": "Power profile: {profile}",
+  "tooltip": true,
+  "format-icons": {
+    "performance": "",
+    "balanced": "",
+    "power-saver": ""
+  }
+},
+	"pulseaudio#input": {
+        "format-source": "",
+        "format-source-muted": "",
+        "format": "{format_source}",
+        "tooltip": false
+    },
+    "pulseaudio#output": {
+	"format": "{icon} {volume}%",
+	"format-muted": "",
+	"format-icons": {
+		"headphone": "",
+		"default": ["","", ""]
+	},
+	"on-click": "pavucontrol"
+},
+"hyprland/workspaces#left": {
+	"format": "{icon}",
+	"format-icons": {
+		"default": "",
+		"active": ""
+	},
+	"persistent-workspaces": {
+		"eDP-1": [1,2,3,4,5],
+		"DP-5": [11,12,13,14,15],
+		"HDMI-A-2": [11,12,13,14,15]		
+	},
+	"ignore-workspaces": [6,7,8,9,10,16,17,18,19,20],
+	"persistent-only": true
+},
+"hyprland/workspaces#right": {
+	"format": "{icon}",
+	"format-icons": {
+		"default": "",
+		"active": ""
+	},
+	"persistent-workspaces": {
+		"eDP-1": [6,7,8,9,10],
+		"DP-5": [16,17,18,19,20],
+		"HDMI-A-2": [16,17,18,19,20]
+	},
+	"ignore-workspaces": [1,2,3,4,5,11,12,13,14,15],
+	"persistent-only": true
+},
+"cpu": {
+	"interval": 10,
+	"format": " {}%",
+	"max-length": 10
+},
+"memory": {
+	"interval": 30,
+	"format": " {used:0.1f}G/{total:0.1f}G"
+},
+ "temperature": {
+	"format": " {temperatureC}°C"
+},
+"bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "󰂯",
+	"format-disabled": "󰂲", // an empty format will hide the module
+	"format-connected": "󰂱",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+	
+},
+"cava": {
+    "framerate": 30,
+    "autosens": 0,
+	"sensitivity": 1,
+	"bars": 24,
+	"lower_cutoff_freq": 50,
+	"higher_cutoff_freq": 10000,
+	"hide_on_silence": false,
+	"method": "pulse",
+	"source": "auto",
+	"stereo": true,
+	"reverse": false,
+	"bar_delimiter": 0,
+	"monstercat": false,
+	"waves": false,
+	"noise_reduction": 0.8,
+	"input_delay": 2,
+
+	"rotate": 180,
+
+    "format-icons": [
+		" ", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+    ],
+	"actions": {
+		"on-click-right": "mode"
+	}
+}
+
+
+}

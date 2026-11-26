@@ -1,0 +1,193 @@
+@import "colors.css";
+
+* {
+    all: unset;
+    font-family: "Iosevka Nerd Font Propo", monospace;
+}
+
+window#waybar {
+    background: @background;
+    color: @foreground;
+}
+
+/* =========================
+   WSPÓLNE WYSPY
+   =========================*/ 
+
+
+.modules-center {
+    
+    background: @background;
+    
+    
+    border-top-width: 0;
+    
+
+    padding: 0 8px;
+}
+
+.modules-left {
+    margin-left: 0px;
+}
+
+.modules-right {
+    margin-right: 0px;   
+}
+
+#left, #center, #right  {
+  background-color: @background;
+}
+#left {
+  min-width: 300px;
+}
+#center {
+  min-width: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+#right {
+  min-width: 200px;
+}
+
+#power-profiles-daemon {
+    font-weight: 600;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 16px;
+}
+
+#cpu {
+    margin-left: 0px;
+    font-weight: 600;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 30px;
+}
+
+#memory {
+    font-weight: 600;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 30px;
+}
+
+#temperature {
+    font-weight: 600;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 30px;
+}
+
+
+
+#workspaces.left, #workspaces.right {
+    min-width: 75px;
+    font-size: 0.4rem;
+    padding: 2px 6px;
+    margin: 11px 0;
+    border-radius: 99px;
+    
+}
+
+#workspaces.left button, #workspaces.right button {
+    background-color: @surface-container-high;
+    color: transparent;
+    padding: 0px 5px;
+    border-radius: 99px;
+    margin: 0 2px;
+    min-width: 4px;
+}
+
+#workspaces.left button.active, #workspaces.right button.active {
+    background-color: @primary;
+    color: @on-primary;
+    min-width: 0.5rem;
+    transition:none;
+}
+
+#clock {
+    color: @foreground;
+    min-width: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+
+    padding: 0 10px;
+}
+
+#network {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 40px;
+}
+
+#pulseaudio.output {
+    font-weight: 600;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 45px;    
+}
+
+#pulseaudio.input {
+    font-weight: 600;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 14px;
+    padding: 0 6px 0 8px    
+}
+
+#battery {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: @foreground;
+    padding: 0 8px;
+    min-width: 30px;
+}
+
+#bluetooth {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: @foreground;
+    min-width: 10px;
+    padding: 0 8px 0 8px
+}
+
+/* =========================
+   CAVA
+   ========================= */
+
+#cava{
+    
+    background: transparent;
+    border: none;
+
+    color: @primary;
+
+    padding: 0;
+    margin-top: -20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+/* =========================
+   TOOLTIP
+   ========================= */
+
+tooltip {
+    background: transparent;
+}
+
+tooltip label {
+    background: @surface-container-high;
+    color: @foreground;
+
+    padding: 6px 10px;
+
+    border: 1px solid @outline;
+    border-radius: 8px;
+
+    font-size: 1rem;
+}

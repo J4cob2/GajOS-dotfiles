@@ -1,0 +1,110 @@
+@import "colors.css";
+* {
+    all: unset;
+    font-family: "Iosevka Nerd Font Propo", monospace;
+}
+
+window#waybar {
+    background: alpha(@background,0.99);
+    color: @foreground;
+    border: 2px solid;
+    border-top: 0px;
+    border-color: @primary;
+    border-radius: 0 0 15px 15px;
+}
+
+.modules-left {
+    margin-left: 16px;
+    font-weight: 700;
+    color: @foreground;
+}
+.modules-right {
+    margin-right: 16px;
+    font-weight: 700;
+    color: @foregound
+}
+
+#center {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#left {
+    margin-right: 0px;
+}
+#right {
+    margin-left: 0px;
+}
+
+#cpu {
+    padding: 0 8px;
+}
+#memory {
+    padding: 0 8px;
+}
+#temperature {
+    padding: 0 8px;
+}
+
+#clock {
+    padding: 0 8px;
+}
+
+#network {
+    padding: 0 8px;
+    
+}
+#bluetooth {
+    padding: 0 8px;
+}
+#pulseaudio.output {
+    padding: 0 8px;
+}
+#pulseaudio.input {
+    padding: 0 8px;
+}
+#power-profiles-daemon {
+    padding: 0 8px;
+}
+#battery {
+    padding: 0 8px;
+    min-width: 50px
+}
+
+/*================
+    WORKSPACES
+================*/
+#workspaces.left, #workspaces.right {
+    min-width: 90px;
+    font-size: 0.4rem;
+    padding: 2px 8px;
+    margin: 11px 0;
+    border-radius: 99px;
+    
+}
+
+#workspaces.left button, #workspaces.right button {
+    background-color: @surface-container-high;
+    color: transparent;
+    padding: 0px 8px;
+    border-radius: 99px;
+    margin: 0 2px;
+    min-width: 4px;
+}
+
+#workspaces.left button.active, #workspaces.right button.active {
+    background-color: @primary;
+    color: @on-primary;
+    min-width: 0.5rem;
+    transition:none;
+}
+
+/*==========
+    CAVA
+==========*/
+#cava {
+    background: transparent;
+    border: none;
+    color: @primary;
+    margin-top: -18px;
+    min-height: 50px;
+}
