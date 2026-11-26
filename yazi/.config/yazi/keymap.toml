@@ -1,0 +1,48 @@
+# Ukryte pliki
+[[mgr.append_keymap]]
+on = "<C-h>"
+run = "hidden toggle"
+desc = "Toggle hidden files"
+
+# Nowy plik lub folder (nazwa zakończona / tworzy folder)
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = "create"
+desc = "Nowy plik/folder"
+
+# Kopiuj / Wytnij / Wklej
+[[mgr.prepend_keymap]]
+on = "<C-c>"
+run = "yank"
+desc = "Kopiuj"
+
+[[mgr.prepend_keymap]]
+on = "<C-x>"
+run = "yank --cut"
+desc = "Wytnij"
+
+[[mgr.prepend_keymap]]
+on = "<C-v>"
+run = "paste"
+desc = "Wklej"
+
+# Zakładki
+[[mgr.prepend_keymap]]
+on = "<C-t>"
+run = "tab_create --current"
+desc = "Nowa zakładka"
+
+[[mgr.prepend_keymap]]
+on = "<C-w>"
+run = "tab_close 0"
+desc = "Zamknij zakładkę"
+
+[[mgr.prepend_keymap]]
+on = "<C-Right>"
+run = "tab_switch 1 --relative"
+desc = "Następna zakładka"
+
+[[mgr.prepend_keymap]]
+on = "<C-Left>"
+run = "tab_switch -1 --relative"
+desc = "Poprzednia zakładka"
