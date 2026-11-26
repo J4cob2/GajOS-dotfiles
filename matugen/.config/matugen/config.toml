@@ -1,0 +1,31 @@
+[config]
+scheme_type = "scheme-content"
+mode = "dark"
+reload_apps = false
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hypr-colors.lua'
+output_path = '~/.config/hypr/hypr-colors.lua'
+post_hook = 'hyprctl reload'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/wlogout-colors.css'
+output_path = '~/.config/wlogout/colors.css'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -USR1 kitty'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.vscodium]
+input_path = '~/.config/matugen/templates/vscode-colors.json'
+output_path = '~/.vscode-oss/extensions/local.matugen-theme-1.0.0/themes/matugen.json'
