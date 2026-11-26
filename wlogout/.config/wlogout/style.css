@@ -1,0 +1,50 @@
+@import "colors.css";
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(12, 12, 12, 0.5);
+	
+}
+
+button {
+    border-radius: 5;
+    border-color: @primary;
+	text-decoration-color: @foreground;
+    color: @foreground;
+	background-color: @background;
+	border-style: solid;
+	border-width: 1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+
+	
+	
+}
+
+button:focus, button:active, button:hover {
+	background-color: @primary;
+	text-decoration-color: @background;
+	color: @background;
+	outline-style: none;
+}
+
+
+
+#lock {background-image: image(url("/home/j4cob/.config/wlogout/icons-light/lock.png"));}
+#logout {background-image: image(url("/home/j4cob/.config/wlogout/icons-light/logout.png"));}
+#suspend {background-image: image(url("/home/j4cob/.config/wlogout/icons-light/suspend.png"));}
+#hibernate {background-image: image(url("/home/j4cob/.config/wlogout/icons-light/hibernate.png"));}
+#shutdown {background-image: image(url("/home/j4cob/.config/wlogout/icons-light/shutdown.png"));}
+#reboot {background-image: image(url("/home/j4cob/.config/wlogout/icons-light/reboot.png"));}
+
+#lock:hover,      #lock:focus,      #lock:active      { background-image: image(url("/home/j4cob/.config/wlogout/icons-dark/lock.png")); }
+#logout:hover,    #logout:focus,    #logout:active    { background-image: image(url("/home/j4cob/.config/wlogout/icons-dark/logout.png")); }
+#suspend:hover,   #suspend:focus,   #suspend:active   { background-image: image(url("/home/j4cob/.config/wlogout/icons-dark/suspend.png")); }
+#hibernate:hover, #hibernate:focus, #hibernate:active { background-image: image(url("/home/j4cob/.config/wlogout/icons-dark/hibernate.png")); }
+#reboot:hover,    #reboot:focus,    #reboot:active    { background-image: image(url("/home/j4cob/.config/wlogout/icons-dark/reboot.png")); }
+#shutdown:hover,  #shutdown:focus,  #shutdown:active  { background-image: image(url("/home/j4cob/.config/wlogout/icons-dark/shutdown.png")); }
