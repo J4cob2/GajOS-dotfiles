@@ -1,0 +1,139 @@
+/**
+ * Wallpaper picker
+ */
+
+@import "~/.config/rofi/colors.rasi"
+
+window {
+    location: north;
+    y-offset:50px;
+
+    width: 900px;
+
+    background-color: @background;
+
+    border: 2px solid;
+    border-radius: 12px;
+    border-color: @active;
+
+    padding: 12px;
+}
+
+mainbox {
+    background-color: @background;
+
+    children: [
+        inputbar,
+        listview
+    ];
+
+    spacing: 8px;
+}
+
+inputbar {
+    background-color: @background;
+
+    children: [
+        prompt,
+        entry
+    ];
+
+    spacing: 8px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+
+    placeholder: "";
+}
+
+listview {
+    columns: 3;
+    lines: 1;
+
+    spacing: 10px;
+
+    dynamic: false;
+    fixed-height: true;
+    fixed-columns: true;
+
+    scrollbar: false;
+
+    background-color: @background;
+}
+
+element {
+    orientation: vertical;
+
+    children: [
+        element-icon,
+        element-text
+    ];
+
+    padding: 6px;
+    spacing: 4px;
+
+    background-color: @background;
+    text-color: @foreground;
+
+    border: 0px;
+    border-radius: 10px;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected-background;
+    text-color: @selected-foreground;
+}
+
+element-icon {
+    size: 240px;
+
+    background-color: transparent;
+    text-color: inherit;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+
+    expand: false;
+}
+
+element-text {
+    enabled: false;
+    background-color: transparent;
+    text-color: inherit;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+
+    padding: 2px;
+
+    font: "JetBrainsMono Nerd Font 8";
+}
+
+num-rows {
+    enabled: false;
+}
+
+num-filtered-rows {
+    enabled: false;
+}
+
+textbox-num-sep {
+    enabled: false;
+}

@@ -1,0 +1,138 @@
+@import "~/.config/rofi/colors.rasi"
+* {
+    font: "JetBrainsMono Nerd Font 12";
+
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+configuration {
+    drun-display-format: "{name}";
+}
+
+window {
+    location: north;
+    y-offset: 50px;
+
+    width: 600px;
+    border: 2px;
+    border-radius: 18px;
+    border-color: @active;
+    background-color: @background;
+    padding: 18px;
+}
+
+mainbox {
+    spacing: 14px;
+    background-color: @background;
+
+    children: [
+        inputbar,
+        listview
+    ];
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: @background;
+    children:[
+        prompt
+    ];
+}
+
+num-rows {
+    enabled: false;
+}
+
+num-filtered-rows {
+    enabled: false;
+}
+
+textbox-num-sep {
+    enabled: false;
+}
+
+prompt {
+    padding: 0px 4px;
+    text-color: @active;
+}
+
+entry {
+    padding: 0px;
+    text-color: @foreground;
+    cursor: text;
+    placeholder: "";
+}
+
+listview {
+    spacing: 4px;
+    columns: 3;
+    lines: 1;
+    scrollbar: false;
+    background-color: @background;
+
+    children: [
+        element-icon,
+        element-text
+    ];
+}
+
+element {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element normal.active {
+    background-color: @background;
+    text-color: @active;
+}
+
+element alternate.active {
+    background-color: @background;
+    text-color: @active;
+}
+
+element normal.urgent {
+    background-color: @background;
+    text-color: @urgent;
+}
+
+element alternate.urgent {
+    background-color: @background;
+    text-color: @urgent;
+}
+
+element selected.normal {
+    background-color: @selected-background;
+    text-color: @selected-foreground;
+}
+
+element selected.active {
+    background-color: @selected-background;
+    text-color: @selected-foreground;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @selected-foreground;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
